@@ -10,7 +10,7 @@ import sys
 class qsbk(object):  # def the main class
     def __init__(self):  # init the class object
         self.page_index = 1  # set page_index
-        self.user_agent = "Mozilla/5.0 (X11; Linux x86_64) Chrome/51.0.2704.63 Safari/537.36"  # set user_agent
+        self.user_agent = "Mozilla/5.0 Chrome/51.0.2704.63 Safari/537.36"  # set user_agent
         self.headers = {"User-Agent": self.user_agent}  # make headers
         self.stories = []  # gloable list which store the story
 
@@ -65,9 +65,10 @@ class qsbk(object):  # def the main class
 
     def start(self):
         print 'ready for the articles... \n"q" for the quit command,\nEnter to continue.'
-        self.load_items()
-        # time.sleep(2)
-        self.get_one()
+        while True:
+            self.load_items()
+            # time.sleep(2)
+            self.get_one()
 
 
 qiubai = qsbk()

@@ -44,7 +44,7 @@ class fix_tag(object):
 class BDTB(object):
     # define the init argument
     def __init__(self, baseurl, see_lz, seprate_text):
-        self.baseurl = baseurl # whicj url
+        self.baseurl = baseurl # which url
         self.see_lz = '?see_lz=' + str(see_lz) # wheather to see author 1 or 0
         self.fix_tag = fix_tag()    # import fix_tag class
         self.seprate_text = seprate_text    # will the text seprate with ---
@@ -143,5 +143,5 @@ seprate_text = raw_input("是否写入楼层信息，是输入1，否输入0\n>>
 bdtb = BDTB(baseurl,see_lz,seprate_text)
 bdtb.start() 
 
-
+# bug : all page content is page 1 .
 
